@@ -35,5 +35,10 @@ public class App {
 
 		System.out.println("returnNlast()");
 		System.out.println(premier.returnNlast(1));
+
+		System.out.println(" addValue ordered() et insertSort()");
+		premier.addValue_ordered(5);
+		premier.insertSort();
+		premier.print();
 	}
 }

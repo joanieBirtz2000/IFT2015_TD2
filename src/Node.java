@@ -85,11 +85,23 @@ public class Node {
 	}
 
 	public void addValue_ordered(int value) {
-		// TODO
+		if (this.next == null || this.next.value > value) {
+			this.next = new Node(value, this.next);
+		} else {
+			this.next.addValue_ordered(value);
+		}
 	}
 
 	public void insertSort() {
-		// TODO
+		Node sorted = new Node(this.value);
+		Node current = this.next;
+		while (current != null) {
+			Node next = current.next;
+			sorted.addValue_ordered(current.value);
+			current = next;
+		}
+		this.value = sorted.value;
+		this.next = sorted.next;
 	}
 
 	// Ma fonction print()
