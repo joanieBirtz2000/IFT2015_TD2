@@ -23,7 +23,8 @@ public class App {
 		troisieme.print();
 
 		System.out.println("Test  removeValue()");
-		premier.removeValue(5);
+		premier.print();
+		premier.removeValue(2);
 		premier.print();
 
 		System.out.println("length_iteratif() et length_recurssion()");
