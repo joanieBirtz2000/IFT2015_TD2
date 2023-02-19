@@ -131,7 +131,28 @@ public class Grid {
     }
 
     public boolean move(Cell box){
-        // TODO
+        if((box.getPointeur_bas().getValeur()!=-1) && (box.getPointeur_droite().getValeur()!=-1) &&
+        		(box.getPointeur_haut().getValeur()!=-1) && (box.getPointeur_gauche().getValeur()!=-1)) {
+        	return false;
+        }else {
+        	if(box.getPointeur_bas().getValeur()==-1) {
+        		int tmp = box.getPointeur_bas().getValeur();
+        		box.getPointeur_bas().setValeur(box.getValeur());
+        		box.setValeur(tmp);
+        	}else if(box.getPointeur_haut().getValeur()==-1) {
+        		int tmp = box.getPointeur_haut().getValeur();
+        		box.getPointeur_haut().setValeur(box.getValeur());
+        		box.setValeur(tmp);
+        	}else if(box.getPointeur_droite().getValeur()==-1) {
+        		int tmp = box.getPointeur_droite().getValeur();
+        		box.getPointeur_droite().setValeur(box.getValeur());
+        		box.setValeur(tmp);
+        	}else if(box.getPointeur_gauche().getValeur()==-1) {
+        		int tmp = box.getPointeur_gauche().getValeur();
+        		box.getPointeur_gauche().setValeur(box.getValeur());
+        		box.setValeur(tmp);
+        	}
+        }
         return true;
     }
 
