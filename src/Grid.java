@@ -159,6 +159,7 @@ public class Grid {
     public boolean check_complete(){
     	int[] ligne1 = {grid.get(0).getValeur(),grid.get(1).getValeur(),grid.get(2).getValeur(),grid.get(3).getValeur()};
     	int[] ligne2 = {grid.get(8).getValeur(),grid.get(9).getValeur(),grid.get(10).getValeur(),grid.get(11).getValeur()};
+    	
     	for(int i=0; i<ligne1.length;i++) {
     		if(ligne1[i]!=ligne2[i]) {
     			return false;
