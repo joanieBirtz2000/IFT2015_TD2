@@ -161,6 +161,7 @@ public class Grid {
     	int[] ligne2 = {grid.get(8).getValeur(),grid.get(9).getValeur(),grid.get(10).getValeur(),grid.get(11).getValeur()};
     	
     	for(int i=0; i<ligne1.length;i++) {
+    		
     		if(ligne1[i]!=ligne2[i]) {
     			return false;
     		}
